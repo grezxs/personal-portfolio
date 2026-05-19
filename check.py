@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).parent
-MAIN = ROOT / "Portfolio.html"
+MAIN = ROOT / "index.html"
 
 GREEN = "\033[32m"
 RED   = "\033[31m"
@@ -37,7 +37,7 @@ def warn(label, detail=""):
 # ─────────────────────────────────────────────────────────
 print(f"\n{YELLOW}── A. File Existence ──────────────────────────────────────{RESET}")
 
-for f in ["Portfolio.html", "colors_and_type.css", "quant.css", "data.js",
+for f in ["index.html", "colors_and_type.css", "quant.css", "data.js",
           "app.jsx", "tweaks-panel.jsx"]:
     p = ROOT / f
     (ok if p.exists() else fail)(f"{f} exists",
