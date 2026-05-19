@@ -1,0 +1,510 @@
+/* ==========================================================================
+   Stock Rating Analysis — Design Tokens
+   Drop-in: <link rel="stylesheet" href="colors_and_type.css">
+   ========================================================================== */
+
+/* If a future surface needs more iconography, Lucide is the closest match
+   in spirit (single-weight stroke, restrained). Uncomment to opt in:
+   <script src="https://unpkg.com/lucide@latest"></script>
+*/
+
+/* Inter & JetBrains Mono — Google Fonts CDN (no local files bundled). */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ─────────────────────────────────────────────────────────────────────
+   Financier — the FT brand serif, self-hosted.
+   Two optical sizes:
+     - Financier Display  → H1, large editorial type (28px+)
+     - Financier Text     → body editorial, pull quotes, callouts (≤24px)
+   Test naming kept on the @font-face src URLs to match the uploaded files;
+   family names are normalised so authors can write `font-family: 'Financier Display'`.
+   ───────────────────────────────────────────────────────────────────── */
+
+/* ── Financier Display ──────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 300; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-Light-BF6617577302761.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 300; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-LightItalic-BF66175772ecbb3.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 400; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-Regular-BF66175772f0c08.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 400; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-RegularItalic-BF66175772e2ffb.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 500; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-Medium-BF66175772f1b99.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 500; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-MediumItalic-BF66175772a68ae.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 600; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-Semibold-BF66175772a85c7.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 600; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-SemiboldItalic-BF66175772e11c7.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 700; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-Bold-BF661757723d7e3.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 700; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-BoldItalic-BF66175772cbe41.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 900; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-Black-BF6617577273d88.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Display';
+  font-weight: 900; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierDisplay-BlackItalic-BF6617577248bda.otf') format('opentype');
+}
+
+/* ── Financier Text ─────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 400; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierText-Regular-BF66175773066ef.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 400; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierText-RegularItalic-BF66175772ca8b9.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 500; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierText-Medium-BF66175772edb27.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 500; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierText-MediumItalic-BF66175772ad058.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 700; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierText-Bold-BF66175772cf1e5.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 700; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierText-BoldItalic-BF66175772c74e7.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 900; font-style: normal; font-display: swap;
+  src: url('fonts/TestFinancierText-Black-BF66175772e3db2.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Financier Text';
+  font-weight: 900; font-style: italic; font-display: swap;
+  src: url('fonts/TestFinancierText-BlackItalic-BF66175771925e6.otf') format('opentype');
+}
+
+/* =====================================================================
+   Theme palette — Light = FT paper / Dark = Bloomberg terminal (default).
+   Set `data-theme="light"` or `data-theme="dark"` on <html> (or any
+   ancestor). Defaults to dark, with `prefers-color-scheme: light` as a
+   fallback when no explicit theme is set.
+   ===================================================================== */
+
+:root,
+:root[data-theme="dark"] {
+  /* ── Surface (Bloomberg terminal — near-black) ───────────────────────── */
+  --color-bg:        #0a0a0b;
+  --color-card:      #131316;
+  --color-card-2:    #1b1b1f;        /* raised surface, alt-row */
+  --color-border:    #2a2a30;
+  --color-divider:   #1f1f24;
+  --color-surface-2: #16161a;
+
+  /* ── Foreground ──────────────────────────────────────────────────────── */
+  --fg-1:            #ededee;        /* primary text */
+  --fg-2:            #b9b9bd;        /* table cells, body */
+  --fg-3:            #7d7d83;        /* muted, eyebrow */
+  --fg-4:            #5b5b62;        /* placeholder, disabled */
+  --fg-5:            #3a3a40;        /* em-dash, dim dividers */
+
+  /* ── Signal: 3-tier rating ───────────────────────────────────────────── */
+  --buy:             #4ade80;        /* screen-bright green */
+  --buy-bg:          rgba(74, 222, 128, 0.12);
+  --buy-border:      #166534;
+  --buy-strong:      #86efac;
+
+  --hold:            #fbbf24;
+  --hold-text:       #fcd34d;
+  --hold-bg:         rgba(251, 191, 36, 0.12);
+  --hold-bg-soft:    rgba(251, 191, 36, 0.08);
+  --hold-border:     #78350f;
+
+  --sell:            #f87171;
+  --sell-bg:         rgba(248, 113, 113, 0.12);
+  --sell-border:     #7f1d1d;
+  --sell-strong:     #fca5a5;
+
+  /* ── Signal: 4-tier financial health (adds teal "HEALTHY") ───────────── */
+  --health-strong:        #4ade80;
+  --health-strong-bg:     rgba(74, 222, 128, 0.12);
+  --health-strong-border: #166534;
+
+  --health-healthy:        #5eead4;
+  --health-healthy-bg:     rgba(94, 234, 212, 0.12);
+  --health-healthy-border: #115e59;
+
+  --health-alert:        #fbbf24;
+  --health-alert-bg:     rgba(251, 191, 36, 0.12);
+  --health-alert-border: #78350f;
+
+  --health-weak:        #f87171;
+  --health-weak-bg:     rgba(248, 113, 113, 0.12);
+  --health-weak-border: #7f1d1d;
+
+  /* ── Action / accent — Bloomberg amber ───────────────────────────────── */
+  --action:          #ff9e1b;        /* Bloomberg amber */
+  --action-hover:    #ffb24a;
+  --action-fg:       #0a0a0b;        /* black ink on amber */
+  --action-disabled: #3a3a40;
+  --link:            #fbbf24;
+  --highlight-bg:    rgba(255, 158, 27, 0.10);
+  --tab-active:      #ff9e1b;
+  --bar-primary:     #ff9e1b;
+
+  /* ── Chart palette (screen-tuned) ────────────────────────────────────── */
+  --chart-blue:      #60a5fa;
+  --chart-blue-2:    #93c5fd;
+  --chart-green:     #4ade80;
+  --chart-green-2:   #86efac;
+  --chart-amber:     #ff9e1b;        /* Bloomberg amber */
+  --chart-orange:    #fb923c;
+  --chart-red:       #f87171;
+  --chart-indigo:    #818cf8;
+  --chart-violet:    #c084fc;
+  --chart-cyan:      #67e8f9;
+  --chart-grid:      #2a2a30;
+  --chart-grid-soft: #1f1f24;
+
+  /* ── Alert banner (separate from the SELL palette) ───────────────────── */
+  --alert-warning-bg:     rgba(255, 158, 27, 0.08);
+  --alert-warning-border: #78350f;
+  --alert-warning-text:   #fcd34d;
+}
+
+/* =====================================================================
+   Light theme — FT salmon paper, claret accents
+   ===================================================================== */
+:root[data-theme="light"] {
+  /* ── Surface — FT salmon paper ───────────────────────────────────────── */
+  --color-bg:        #fff1e5;        /* the FT "pink" */
+  --color-card:      #fffaf3;        /* slightly lifted */
+  --color-card-2:    #fef3e3;
+  --color-border:    #e6d9c8;
+  --color-divider:   #efe3d2;
+  --color-surface-2: #fbeed9;
+
+  /* ── Foreground — ink on paper ───────────────────────────────────────── */
+  --fg-1:            #1a1a1a;
+  --fg-2:            #33302d;
+  --fg-3:            #66605c;
+  --fg-4:            #999188;
+  --fg-5:            #c8bfb3;
+
+  /* ── Signal — desaturated, editorial ─────────────────────────────────── */
+  --buy:             #1d6b3a;
+  --buy-bg:          #dfecd9;
+  --buy-border:      #6ea36a;
+  --buy-strong:      #14512b;
+
+  --hold:            #b06b1c;
+  --hold-text:       #7a4a13;
+  --hold-bg:         #fde6c8;
+  --hold-bg-soft:    #fbeed9;
+  --hold-border:     #d49a59;
+
+  --sell:            #990f3d;        /* FT claret */
+  --sell-bg:         #f5d8d8;
+  --sell-border:     #c8546c;
+  --sell-strong:     #6d0a2b;
+
+  --health-strong:        #1d6b3a;
+  --health-strong-bg:     #dfecd9;
+  --health-strong-border: #6ea36a;
+
+  --health-healthy:        #1d6b69;
+  --health-healthy-bg:     #d9ebe9;
+  --health-healthy-border: #5a9b98;
+
+  --health-alert:        #7a4a13;
+  --health-alert-bg:     #fbeed9;
+  --health-alert-border: #d49a59;
+
+  --health-weak:        #6d0a2b;
+  --health-weak-bg:     #f5d8d8;
+  --health-weak-border: #c8546c;
+
+  /* ── Action — FT claret ──────────────────────────────────────────────── */
+  --action:          #990f3d;
+  --action-hover:    #7d0c33;
+  --action-fg:       #fffaf3;
+  --action-disabled: #c8bfb3;
+  --link:            #990f3d;
+  --highlight-bg:    #fbeed9;
+  --tab-active:      #990f3d;
+  --bar-primary:     #990f3d;
+
+  --chart-blue:      #1f4f7a;
+  --chart-blue-2:    #3b6f99;
+  --chart-green:     #1d6b3a;
+  --chart-green-2:   #2d8a4f;
+  --chart-amber:     #b06b1c;
+  --chart-orange:    #c25b1e;
+  --chart-red:       #990f3d;
+  --chart-indigo:    #4b3f8f;
+  --chart-violet:    #6e3f8f;
+  --chart-cyan:      #1d6b69;
+  --chart-grid:      #e6d9c8;
+  --chart-grid-soft: #efe3d2;
+
+  --alert-warning-bg:     #fbeed9;
+  --alert-warning-border: #d49a59;
+  --alert-warning-text:   #7a4a13;
+}
+
+/* Respect OS preference only when no explicit theme has been set */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+  }
+  :root:not([data-theme]) {
+    --color-bg:        #fff1e5;
+    --color-card:      #fffaf3;
+    --color-card-2:    #fef3e3;
+    --color-border:    #e6d9c8;
+    --color-divider:   #efe3d2;
+    --color-surface-2: #fbeed9;
+    --fg-1:            #1a1a1a;
+    --fg-2:            #33302d;
+    --fg-3:            #66605c;
+    --fg-4:            #999188;
+    --fg-5:            #c8bfb3;
+    --buy:#1d6b3a; --buy-bg:#dfecd9; --buy-border:#6ea36a; --buy-strong:#14512b;
+    --hold:#b06b1c; --hold-text:#7a4a13; --hold-bg:#fde6c8; --hold-bg-soft:#fbeed9; --hold-border:#d49a59;
+    --sell:#990f3d; --sell-bg:#f5d8d8; --sell-border:#c8546c; --sell-strong:#6d0a2b;
+    --health-strong:#1d6b3a; --health-strong-bg:#dfecd9; --health-strong-border:#6ea36a;
+    --health-healthy:#1d6b69; --health-healthy-bg:#d9ebe9; --health-healthy-border:#5a9b98;
+    --health-alert:#7a4a13;  --health-alert-bg:#fbeed9;  --health-alert-border:#d49a59;
+    --health-weak:#6d0a2b;   --health-weak-bg:#f5d8d8;   --health-weak-border:#c8546c;
+    --action:#990f3d; --action-hover:#7d0c33; --action-fg:#fffaf3; --action-disabled:#c8bfb3;
+    --link:#990f3d; --highlight-bg:#fbeed9; --tab-active:#990f3d; --bar-primary:#990f3d;
+  }
+}
+
+/* =====================================================================
+   Non-color tokens (typography, geometry, spacing, motion) — theme-agnostic
+   ===================================================================== */
+:root {
+  /* ── Typography ──────────────────────────────────────────────────────── */
+  --font-sans:        'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+                      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif:       'Financier Display', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-serif-text:  'Financier Text', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-mono:        'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+  --fw-black:   800;
+
+  --fs-eyebrow:   11px;          /* uppercase eyebrow labels */
+  --fs-meta:      12px;          /* metadata, table headers */
+  --fs-small:     13px;
+  --fs-body:      15px;
+  --fs-card-ttl:  0.95rem;       /* card titles */
+  --fs-section:   1rem;          /* section titles */
+  --fs-h1:        1.75rem;       /* page title */
+  --fs-rating:    2.5rem;        /* BUY / HOLD / SELL glyph */
+  --fs-stat-lg:   1.6rem;        /* metric card target value */
+  --fs-stat-md:   1.5rem;        /* historical metrics */
+  --fs-stat-sm:   1.05rem;       /* dividend value */
+
+  --lh-tight:    1.1;
+  --lh-snug:     1.2;
+  --lh-normal:   1.5;
+  --lh-relaxed:  1.6;
+
+  --ls-tight:    -0.01em;
+  --ls-loose:    0.04em;
+  --ls-eyebrow:  0.05em;
+  --ls-rating:   0.05em;
+
+  /* ── Geometry ────────────────────────────────────────────────────────── */
+  --radius-xs:  6px;             /* chips, diff-badges */
+  --radius-sm:  8px;             /* form controls, alert banners */
+  --radius-md:  10px;            /* default cards */
+  --radius-lg:  12px;            /* rating badges, sub-rating pills */
+  --radius-pill: 999px;
+
+  --border:        1px solid var(--color-border);
+  --border-divider:1px solid var(--color-divider);
+  --border-heavy:  2px solid var(--color-border);
+
+  --shadow:    0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-2:  0 1px 3px rgba(0, 0, 0, 0.07);   /* 1pt-lighter twin used in chart cards */
+
+  /* ── Spacing scale (4px base) ────────────────────────────────────────── */
+  --sp-1:  4px;
+  --sp-2:  6px;
+  --sp-3:  8px;
+  --sp-4:  10px;
+  --sp-5:  12px;
+  --sp-6:  14px;
+  --sp-7:  16px;
+  --sp-8:  20px;
+  --sp-9:  24px;
+  --sp-10: 32px;
+  --sp-11: 36px;
+  --sp-12: 48px;
+  --sp-13: 64px;
+
+  --gutter:    20px;
+  --max-width: 1140px;
+  --break-md:  700px;
+
+  /* ── Motion ──────────────────────────────────────────────────────────── */
+  --tx-fast: 0.15s;
+  --tx-med:  0.6s;
+  --ease:    ease;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Base reset + typography
+   ────────────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--color-bg);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Semantic typography
+   ────────────────────────────────────────────────────────────────────────── */
+h1, .h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+}
+
+h2, .h2 {
+  font-size: var(--fs-section);
+  font-weight: var(--fw-semi);
+  color: var(--fg-2);
+}
+
+h3, .h3, .card-title {
+  font-size: var(--fs-card-ttl);
+  font-weight: var(--fw-semi);
+  color: var(--fg-2);
+}
+
+h4, .h4 {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--fg-1);
+}
+
+p { color: var(--fg-2); }
+
+.subtitle {
+  color: var(--fg-3);
+  font-size: 0.9rem;
+}
+
+/* The system's eyebrow label — ALL CAPS, 11px, used on every metric box */
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semi);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--fg-3);
+}
+
+/* The rating glyph — BUY / HOLD / SELL */
+.rating-glyph {
+  font-size: var(--fs-rating);
+  font-weight: var(--fw-black);
+  letter-spacing: var(--ls-rating);
+  text-transform: uppercase;
+  line-height: var(--lh-tight);
+}
+
+code, kbd, samp, .num, td, th {
+  font-variant-numeric: tabular-nums;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-surface-2);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Utility: tier color classes (apply text + matching tinted background)
+   ────────────────────────────────────────────────────────────────────────── */
+.tier-buy   { color: var(--buy);          background: var(--buy-bg); }
+.tier-hold  { color: var(--hold-text);    background: var(--hold-bg-soft); }
+.tier-sell  { color: var(--sell-strong);  background: var(--sell-bg); }
+
+.tier-strong  { color: var(--health-strong);  background: var(--health-strong-bg); }
+.tier-healthy { color: var(--health-healthy); background: var(--health-healthy-bg); }
+.tier-alert   { color: var(--health-alert);   background: var(--health-alert-bg); }
+.tier-weak   { color: var(--health-weak);    background: var(--health-weak-bg); }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Skeleton pulse — the only animation in the source product
+   ────────────────────────────────────────────────────────────────────────── */
+@keyframes srds-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.45; }
+}
+.skeleton {
+  background: var(--color-border);
+  border-radius: var(--radius-md);
+  animation: srds-pulse 1.4s ease-in-out infinite;
+}
